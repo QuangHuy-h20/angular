@@ -1,0 +1,8 @@
+<p style="font-size: 18px;color:blue;">ng-if works!</p>
+<div *ngIf="flag" ; else templateElse>Demo ngIf</div>
+<button class="btn btn-success" (click)="createDiv()">Create div</button>
+<button class="btn btn-danger" (click)="collapseDiv()">Collapse div</button>
+
+<ng-template #templateElse>
+  <div>Demo else template work</div>
+</ng-template>
