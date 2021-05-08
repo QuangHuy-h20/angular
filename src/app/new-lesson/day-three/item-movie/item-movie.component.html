@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-img-top" src="https://source.unsplash.com/random" alt="" />
+  <!-- [src]="film.imgUrl" -->
+  <div class="card-body">
+    <h4 class="card-title">{{ film.name }}</h4>
+    <p class="card-text detail">{{ film.detail }}</p> 
+    <p class="card-text detail">{{ likeInListLike }}</p> 
+  </div>
+  <button class="btn btn-success" (click)="like()">Like</button>
+</div>

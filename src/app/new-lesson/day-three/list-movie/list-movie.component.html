@@ -1,0 +1,20 @@
+<h4>list-movie works!</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let movie of listMovie">
+      <app-item-movie
+        [film]="movie"
+        [listLike]="listLikeMovie"
+        (eventOutput)="invokeActionFromChild($event)"
+      ></app-item-movie>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let itemLikeMovie of listLikeMovie">
+      {{ itemLikeMovie.name }} - {{ itemLikeMovie.totalLike }}
+    </div>
+  </div>
+  <button class="btn btn-danger" (click)="demoViewChildren()">
+    Demo View Children
+  </button>
+</div>

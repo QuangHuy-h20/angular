@@ -16,6 +16,9 @@ import { AttributeDirectiveComponent } from './day-two/directives/attribute-dire
 import { NgClassComponent } from './day-two/directives/attribute-directive/ng-class/ng-class.component';
 import { NgStyleComponent } from './day-two/directives/attribute-directive/ng-style/ng-style.component';
 import { HighLightDirective } from './day-two/directives/custom-directive/high-light.directive';
+import { DayThreeComponent } from './day-three/day-three.component';
+import { ListMovieComponent } from './day-three/list-movie/list-movie.component';
+import { ItemMovieComponent } from './day-three/item-movie/item-movie.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { HighLightDirective } from './day-two/directives/custom-directive/high-l
     AttributeDirectiveComponent,
     NgClassComponent,
     NgStyleComponent,
-    HighLightDirective
+    HighLightDirective,
+    DayThreeComponent,
+    ListMovieComponent,
+    ItemMovieComponent
   ],
   imports: [CommonModule, FormsModule],
   exports: [NewLessonComponent],
