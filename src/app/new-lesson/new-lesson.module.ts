@@ -19,6 +19,7 @@ import { HighLightDirective } from './day-two/directives/custom-directive/high-l
 import { DayThreeComponent } from './day-three/day-three.component';
 import { ListMovieComponent } from './day-three/list-movie/list-movie.component';
 import { ItemMovieComponent } from './day-three/item-movie/item-movie.component';
+import { DayFourComponent } from './day-four/day-four.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ItemMovieComponent } from './day-three/item-movie/item-movie.component'
     HighLightDirective,
     DayThreeComponent,
     ListMovieComponent,
-    ItemMovieComponent
+    ItemMovieComponent,
+    DayFourComponent
   ],
   imports: [CommonModule, FormsModule],
   exports: [NewLessonComponent],
