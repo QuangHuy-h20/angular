@@ -7,7 +7,7 @@ import { DayThreeComponent } from './new-lesson/day-three/day-three.component';
 import { DayTwoComponent } from './new-lesson/day-two/day-two.component';
 import { NewLessonComponent } from './new-lesson/new-lesson.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { LoginComponent } from './provider/login/login.component';
 const routes: Routes = [
   {
     path: 'lesson1',
@@ -22,14 +22,14 @@ const routes: Routes = [
     component: DayThreeComponent,
   },
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: '',
     component: NewLessonComponent,
   },
 
-  {
-    path: 'error404',
-    component: PageNotFoundComponent,
-  },
   {
     path: 'admin',
     loadChildren: () => AdminModule,
@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'client',
     loadChildren: () => ClientModule,
+  },
+  {
+    path: 'error404',
+    component: PageNotFoundComponent,
   },
   {
     path: '**',

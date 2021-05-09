@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { tap, map } from 'rxjs/operators';
+import { from } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -34,11 +37,12 @@ export class MovieService {
       imgUrl: '',
     },
   ];
-  
-  constructor() {}
 
-  count(){
-    let a = 1;
-    return a++;
+  constructor(private httpClient: HttpClient) {}
+
+  getListMovie(): Observable<any> {
+    const api =
+      'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01';
+    return this.httpClient.get(api).pipe(tap((val) => console.log(val)));
   }
 }

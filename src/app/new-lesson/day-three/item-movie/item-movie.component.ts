@@ -20,8 +20,8 @@ export class ItemMovieComponent implements OnInit {
 
   like(): void {
     this.countLike();
-    let likeNum = this.movieSer.count();
-    console.log(likeNum);
+    // let likeNum = this.movieSer.count();
+    // console.log(likeNum);
     // this.eventOutput.emit(this.film);
   }
 

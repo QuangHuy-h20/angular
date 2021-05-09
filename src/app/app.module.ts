@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
-
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [AppComponent, DemoComponentComponent, HelloWorldComponent, PageNotFoundComponent, NavbarComponent],
   imports: [
@@ -21,6 +21,8 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
     ClientModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

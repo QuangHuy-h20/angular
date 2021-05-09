@@ -1,0 +1,15 @@
+<form class="example-form">
+  <label>Account</label>
+  <input matInput placeholder="Account" #account />
+  <label>Password</label>
+  <input matInput placeholder="Password" #password />
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="login(account.value, password.value)"
+    >
+      Login
+    </button>
+  </div>
+</form>
