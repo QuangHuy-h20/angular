@@ -8,6 +8,8 @@ import { DayTwoComponent } from './new-lesson/day-two/day-two.component';
 import { NewLessonComponent } from './new-lesson/new-lesson.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './provider/login/login.component';
+import { ProviderModule } from './provider/provider.module';
+import { SignUpComponent } from './provider/sign-up/sign-up.component';
 const routes: Routes = [
   {
     path: 'lesson1',
@@ -24,6 +26,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'sign-up',
+    component: SignUpComponent,
   },
   {
     path: '',
@@ -49,7 +55,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ProviderModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -7,10 +7,10 @@ import { AccountService } from '../services/account.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService) { }
 
-  ngOnInit(): void {}
-  login(account: string, password: string) {
+  ngOnInit(): void { }
+  login(account: string, password: string): void {
     const objectLogin = {
       taiKhoan: account,
       matKhau: password,

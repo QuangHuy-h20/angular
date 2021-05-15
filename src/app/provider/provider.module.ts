@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './login/login.component';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
-  declarations: [LoginComponent],
-  imports: [MaterialModule],
+  declarations: [LoginComponent, SignUpComponent],
+  imports: [MaterialModule, FormsModule, BrowserModule],
 })
-export class ProviderModule {}
+export class ProviderModule { }
