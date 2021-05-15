@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
   signUp(form: any) {
-    const {value} = form;
+    const { value } = form;
     const objSignUp = {
       taiKhoan: value.account,
       matKhau: value.password,
@@ -23,6 +23,8 @@ export class SignUpComponent implements OnInit {
       maLoaiNguoiDung: 'KhachHang',
       hoTen: value.fullName
     }
+    console.log(form);
+
     this.accountService.signUp(objSignUp).subscribe((res) => {
       if (res) {
         console.log(res);
