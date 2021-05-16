@@ -6,6 +6,7 @@ import { ClientComponent } from './client.component';
 import { RouterModule } from '@angular/router';
 import { MoviesComponent } from './movies/movies.component';
 import { CardMovieComponent } from './card-movie/card-movie.component';
+import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 
 const routes = [
   {
@@ -20,12 +21,20 @@ const routes = [
         path: 'movies',
         component: MoviesComponent,
       },
+      {
+        path: 'detail-movie',
+        component: DetailMovieComponent,
+      },
+      {
+        path: 'detail-movie/:idMovie',
+        component: DetailMovieComponent,
+      },
     ],
   },
 ];
 
 @NgModule({
-  declarations: [ClientComponent, AboutUsComponent, MoviesComponent, CardMovieComponent],
+  declarations: [ClientComponent, AboutUsComponent, MoviesComponent, CardMovieComponent, DetailMovieComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export class ClientModule {}
+export class ClientModule { }

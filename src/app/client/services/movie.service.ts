@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -43,12 +43,17 @@ export class MovieService {
   getListMovie(): Observable<any> {
     const api =
       'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01';
-    // return this.httpClient.get(api).pipe(tap((val) => console.log(val)));
-    return this.httpClient.get<objPhim[]>(api).pipe(map((res: objPhim[]) => {
-      return res.map(item => {
-        item.tenPhim = item.tenPhim + 'abc';
-      })
-    }));
+    return this.httpClient.get(api).pipe(tap((val) => console.log(val)));
+    // return this.httpClient.get<objPhim[]>(api).pipe(map((res: objPhim[]) => {
+    //   return res.map(item => {
+    //     item.tenPhim = item.tenPhim + 'abc';
+    //   })
+    // }));
+  }
+
+  getDetailMovie(id: string): Observable<any> {
+    const api = `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`
+    return this.httpClient.get(api).pipe(tap(item => console.log(item)))
   }
 }
 
